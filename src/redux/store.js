@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-// import persistStore from 'redux-persist/es/persistStore';
+import persistStore from 'redux-persist/es/persistStore';
 // import { createAction, createReducer } from '@reduxjs/toolkit';
 import { contactsReducer } from './contactsSlice';
 import { filterReducer } from './filterSlice';
@@ -25,4 +25,4 @@ export const store = configureStore({
     }),
 });
 
-// export const persistor = persistStore(store);
+export const persistor = persistStore(store);
