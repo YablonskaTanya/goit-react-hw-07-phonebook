@@ -14,7 +14,7 @@ export const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
+    // const form = e.target;
     if (contacts.some(({ name }) => name === contactName)) {
       window.alert(`${contactName} is already in your contacts`);
       return;

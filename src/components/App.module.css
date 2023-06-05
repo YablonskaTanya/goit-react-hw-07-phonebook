@@ -11,3 +11,10 @@
 .contactsTitle {
   margin-top: 30px;
 }
+
+.loader {
+  margin-top: 20px;
+  color: rgb(9, 0, 134);
+  margin-left: auto;
+  margin-right: auto;
+}
