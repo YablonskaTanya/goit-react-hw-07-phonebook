@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import css from './Filter.module.css';
 
 import { setFilter } from 'redux/filterSlice';
-import { getStatusFilter } from 'redux/selectors';
+import { selectStatusFilter } from 'redux/selectors';
 
 export const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(getStatusFilter);
+  const filter = useSelector(selectStatusFilter);
 
   const onChange = e => {
     dispatch(setFilter(e.target.value));

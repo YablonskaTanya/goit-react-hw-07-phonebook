@@ -32,21 +32,6 @@ const contactsSlice = createSlice({
       .addCase(deleteContact.fulfilled, handleDeleteFulfilled)
       .addCase(deleteContact.rejected, handleRejected);
   },
-
-  // extraReducers: {
-  //   [fetchContacts.pending](state) {
-  //     state.isLoading = true;
-  //   },
-  //   [fetchContacts.fulfilled](state, action) {
-  //     state.isLoading = false;
-  //     state.error = null;
-  //     state.items = action.payload;
-  //   },
-  //   [fetchContacts.rejected](state, action) {
-  //     state.isLoading = false;
-  //     state.error = action.payload;
-  //   },
-  // },
 });
 
 export const contactsReducer = contactsSlice.reducer;

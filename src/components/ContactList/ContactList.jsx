@@ -3,14 +3,15 @@ import { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact, fetchContacts } from 'redux/operations';
-import { getContacts, getStatusFilter } from 'redux/selectors';
+import { selectContacts, selectStatusFilter } from 'redux/selectors';
+
 
 import css from './ContactList.module.css';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(getContacts);
-  const filtered = useSelector(getStatusFilter);
+  const contacts = useSelector(selectContacts);
+  const filtered = useSelector(selectStatusFilter);
 
   const normalizedFilter = filtered.toLowerCase();
   const filteredContacts = contacts.filter(({ name }) =>

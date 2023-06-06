@@ -3,10 +3,11 @@ import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operations';
-import { getContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
+
 
 export const ContactForm = () => {
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
   const [contactName, setcontactName] = useState('');
@@ -14,7 +15,6 @@ export const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // const form = e.target;
     if (contacts.some(({ name }) => name === contactName)) {
       window.alert(`${contactName} is already in your contacts`);
       return;
